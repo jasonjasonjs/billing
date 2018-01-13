@@ -1,103 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forerunner</title>
-	<script type="text/javascript" src="js/fdb-all.min.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="s.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<title>記帳APP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="JS/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="CSS/css.css">
 </head>
 <body>
-
-	<p>
-		<label>年齡:大於</label>
-		<input type="text" id="edtGT">
-		<label>小於</label>
-		<input type="text" id="edtLT">	
-		<input type="button" id="btnLimitSearch" value="搜尋" class="btn btn-success">
-
-	</p>
-
-	<p>
-		<label>年齡:</label>
-		<label>7</label>
-		<input type="checkbox" value="7" class="cbAge">
-		<label>8</label>
-		<input type="checkbox" value="8" class="cbAge">
-		<label>9</label>
-		<input type="checkbox" value="9" class="cbAge">
-		<label>10</label>
-		<input type="checkbox" value="10" class="cbAge">
-		<label>11</label>
-		<input type="checkbox" value="11" class="cbAge">
-		<label>12</label>
-		<input type="checkbox" value="12" class="cbAge">
-		<label>13</label>
-		<input type="checkbox" value="13" class="cbAge">
-		<input type="button" id="btnCertainSearch" value="搜尋" class="btn btn-success">
-
-	</p>
-
-	<p>
-		<label>姓名:</label>
-		<input type="text" id="edtName">
-		<label>年齡:</label>
-		<input type="text" id="edtAge">	
-		<input type="button " id="btnInsertData" value="InsertData" class="btn btn-info">
-
-	</p>
-
-	<table class="table table-hover">
-		<thead>
-			<tr> 
-				<td>#</td>
-				<td>ID</td>
-				<td>姓名</td>
-				<td>操作</td>
-			</tr>
-		</thead>
-		<tbody id="table-tbody">
-
-		</tbody>
-	</table>
-	<!-- Modal -->
-	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" id="myModal" >
-	  <div class="modal-dialog modal-sm" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
-	        <h4 class="modal-title">學生資料</h4>
-	      </div>
-	      <div class="modal-body" id="modal-body">
-	              
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-	
-	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" id="EditModal" studentID="">
-	  <div class="modal-dialog modal-sm" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
-	        <h4 class="modal-title">修改學生資料</h4>
-	      </div>
-	      <div class="modal-body" id="modal-body">
-	            <p>學生姓名</p>
-	            <input type="text" id="modalName">
-	            <p>學生年齡</p>
-	            <input type="text" id="modalAge">
-	      </div>
-	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-primary" id="btnS">Save changes</button>
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+	<h1>記帳</h1>
+	<button onclick="window.location.href='html.html'" type="button" id="account" class="btn btn-primary css">記帳</button>
+	<br>
+	<button type="button" id="tenExpense" class="btn btn-primary css">近10筆支出</button>
+	<br>
+	<button type="button" id="expense" class="btn btn-primary css">支出</button>
 </body>
 </html>
