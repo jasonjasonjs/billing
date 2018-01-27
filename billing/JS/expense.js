@@ -1,6 +1,6 @@
 var fdb = new ForerunnerDB();
 var db = fdb.db("account");
-var expenseCollection = db.collection('accounts');
+var expenseCollection = db.collection('account');
 
 
 $(document).ready(function(){

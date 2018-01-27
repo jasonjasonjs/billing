@@ -2,8 +2,10 @@ var fdb = new ForerunnerDB();
 var db = fdb.db("account");
 var accountingCollection = db.collection('account');
 
+$(document).ready(function(){
+	accountingCollection.load();
 
-accountingCollection.load();
+});
 
 
 function submit(){

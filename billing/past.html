@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>近十筆資料</title>
+	<title>支出查詢</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="JS/jquery-1.12.2.min.js"></script>
 	<script type="text/javascript" src="JS/fdb-all.min.js"></script>
-	<script type="text/javascript" src="JS/expense.js"></script>
+	<script type="text/javascript" src="JS/past.js"></script>
 	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="CSS/css2.css">
 	<link rel="stylesheet" type="text/css" href="CSS/css.css">
 </head>
 <body>
-	<h1>近十筆資料</h1>
+	<h1>支出查詢</h1>
+	<p class="css2">
+	<input type="radio" value="thisMonth" name="date">本月份
+	<br>
+	<input type="radio" value="period" name="date">指定期間
+	<input type="date" id="dateFrist"> - <input type="date" id="dateLast">
+	</p>
+	<button onclick="searchExpenses()" type="button" class="css">支出查詢</button>
+
+	<h4>支出細項</h4>
 	<table class="table table-striped">
 		<thead>
 			<tr> 
@@ -20,7 +30,7 @@
 				<td>金額</td>
 			</tr>
 		</thead>
-		<tbody id="table-tbody">
+		<tbody id="detail-tbody">
 
 		</tbody>
 	</table>
