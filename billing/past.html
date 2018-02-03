@@ -8,29 +8,44 @@
 	<script type="text/javascript" src="JS/past.js"></script>
 	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="CSS/css2.css">
-	<link rel="stylesheet" type="text/css" href="CSS/css.css">
 </head>
 <body>
 	<h1>支出查詢</h1>
-	<p class="css2">
-	<input type="radio" value="thisMonth" name="date">本月份
-	<br>
-	<input type="radio" value="period" name="date">指定期間
-	<input type="date" id="dateFrist"> - <input type="date" id="dateLast">
-	</p>
-	<button onclick="searchExpenses()" type="button" class="css">支出查詢</button>
 
-	<h4>支出細項</h4>
+	<p><input type="radio" value="thisMonth" name="choice" checked="true">本月份</p>
+	<p><input type="radio" value="period" name="choice" readOnly="true">指定期間</p>
+	<p><input type="date" class="date" id="gte"> ~ <input type="date" class="date" id="lte" readOnly="true"></p>
+	
+	<button class="btn btn-primary" id="btnSearch">查詢</button>
+	<hr>
+	
+	
+	<h2>支出細項</h2>
 	<table class="table table-striped">
 		<thead>
-			<tr> 
+			<tr class="success"> 
 				<td>日期</td>
 				<td>項目</td>
 				<td>金額</td>
 			</tr>
 		</thead>
-		<tbody id="detail-tbody">
+		<tbody id="table-tbody">
+
+		</tbody>
+	</table>
+
+
+	<hr>
+	<h2>分類統計</h2>
+	<table>
+		<thead>
+			<tr class="success"> 
+				<td>類別</td>
+				<td>金額</td>
+				<td>比例</td>
+			</tr>
+		</thead>
+		<tbody id="category-tbody">
 
 		</tbody>
 	</table>

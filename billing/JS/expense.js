@@ -1,38 +1,36 @@
 var fdb = new ForerunnerDB();
 var db = fdb.db("account");
-var expenseCollection = db.collection('account');
+var accountCollection = db.collection('account');
 
 
 $(document).ready(function(){
-	expenseCollection.load(dataLoad);
-
+	accountCollection.load(dataLoad);
 });
 
 
 function dataLoad(){
-	console.log("dataLoad");
-	var expenses = expenseCollection.find(
-	    {},
-		{$orderBy: {date: -1},
-		$limit: 10}
+	var expenses = accountCollection.find(
+			{},
+			{
+				$orderBy: {date:-1},
+				$limit: 10
+			}
 		);
-	updatetable(expenses);
+	updateTable(expenses);
 }
 
 
-
-function updatetable(expenses){
-	console.log("updatetable");
-	console.log(expenses);
+function updateTable(datas){
+	console.log("updateTable");
+	console.log(datas.length);
 	$("#table-tbody").find("tr").remove();
-	for(var i = 0; i < expenses.length; i++){
-		console.log(i);
+
+	for(var i = 0; i < datas.length; i++){
 		$("#table-tbody").append(
 			"<tr>" +
-			"<td>" + expenses[i].date + "</td>" +
-			"<td>" + expenses[i].item + "</td>" +
-			"<td>" + expenses[i].cost + "</td>" +
-			"</tr>"
-			);
+			"<td>" + datas[i].date + "</td>" +
+			"<td>" + datas[i].item + "</td>" +
+			"<td>" + datas[i].amount + "</td>" +
+			"</tr>")
 	}
 }
