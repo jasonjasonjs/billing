@@ -1,9 +1,37 @@
 body{
-	text-align: center;
-	font-size: 15px; 
+	background-color: #00DD00;
 }
-.css{
-	width: 70%;
-	margin: 7px;
-	font-size: 25px; 
+
+button{
+	position: relative;
+}
+
+.title{
+	color: #0000CC;
+    text-align: center;
+    font-size: 50;
+}
+
+.css1{
+	text-align: center;
+	height: 40px;
+    width: 300px;
+    color: #FFFF00;
+    background-color: #0000CC;
+}
+
+.css2{
+	font-size: 50;
+	color: #0000CC;
+}
+
+.css3{
+	color: #FFFF00;
+	background-color: #0000CC;
+	height: 40px;
+    width: 80px;
+}
+
+.center{
+	text-align: center;
 }

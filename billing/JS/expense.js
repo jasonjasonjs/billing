@@ -30,7 +30,7 @@ function updateTable(datas){
 			"<tr>" +
 			"<td>" + datas[i].date + "</td>" +
 			"<td>" + datas[i].item + "</td>" +
-			"<td>" + datas[i].amount + "</td>" +
+			"<td>" + datas[i].cost + "</td>" +
 			"</tr>")
 	}
 }
